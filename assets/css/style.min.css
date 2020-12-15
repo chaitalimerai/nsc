@@ -1,0 +1,404 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+/* ============== colors =============== */
+
+:root {
+    --white: #ffffff;
+    --white100: #f4f5f9;
+    --black: #000000;
+    --black100: #040301;
+    --primary: #2068a1;
+    --primary100: #003150;
+    --primary200: #005293;
+    --primary300: #3394db;
+    --gray: #626b6f;
+    --warning: #ffd63a;
+    /* font variables */
+    --lato: 'Lato', sans-serif;
+    --fontLight: 300;
+    --fontRegular: 400;
+    --fontMedium: 600;
+    --fontBold: 700;
+    --fontBlack: 900;
+    --border_radius: 12px;
+}
+
+/* ============== ends: colors =============== */
+
+/* ============== base css =============== */
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: var(--lato);
+    font-size: 14px;
+    font-weight: var(--fontLight);
+    color: var(--gray);
+    line-height: 1.5;
+    overflow: hidden;
+    background: var(--white);
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-family: var(--lato);
+    font-weight: var(--fontLight);
+    color: var(--primary100);
+    margin: 0;
+}
+
+button, input, textarea {
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+
+.btn {
+    color: var(--gray);
+    padding: 5px 20px !important;
+    font-weight: var(--fontMedium);
+    border-radius: var(--border_radius);
+}
+
+.btn:hover, .btn:active, .btn:focus, .btn.active {
+    color: var(--primary100);
+}
+
+.btn-warning {
+    border-color: var(--warning) !important;
+    background-color: var(--warning) !important;
+}
+
+/* scrolll bar */
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0px transparent;
+    border-radius: var(--border_radius);
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gray);
+}
+
+/* ============== Ends: base css =============== */
+
+.main_wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.main_content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+/* ============== main header css ============== */
+
+.common_main_header {
+    width: 100%;
+    background-color: var(--white);
+}
+
+.common_main_header .navbar {
+    background-color: var(--white);
+}
+
+.common_main_header .gov_logo {
+    max-width: 170px;
+}
+
+.common_main_header .nsc_logo {
+    max-width: 150px;
+}
+
+.common_main_header .toggle_bars_btn {
+    padding: 0 !important;
+}
+
+.primary_nav .toggle_bars, .common_main_header .toggle_bars {
+    width: 25px;
+    height: 25px;
+    color: var(--primary);
+}
+
+.common_main_header .custom_navbar_nav {
+    justify-content: flex-end;
+    width: 100%;
+    align-items: center;
+}
+
+.common_main_header .logo_row {
+    display: flex;
+    align-items: center;
+}
+
+.common_main_header .custom_navbar_nav .nav-link {
+    padding: 8px 15px;
+    margin: 0 5px;
+    text-transform: capitalize;
+    font-size: 14px;
+    white-space: nowrap;
+    color: var(--primary);
+    font-weight: var(--fontMedium);
+    border-radius: var(--border_radius);
+}
+
+.common_main_header .custom_navbar_nav .nav-link:hover, .common_main_header .custom_navbar_nav .nav-link:active, .common_main_header .custom_navbar_nav .nav-link:focus, .common_main_header .custom_navbar_nav .nav-link.active {
+    color: var(--black100);
+    background-color: var(--warning) !important;
+}
+
+.common_main_header .custom_navbar_nav .nav-link.header_search_icon {
+    background-color: transparent !important;
+}
+
+.common_main_header .custom_navbar_nav .dropdown-menu {
+    border-color: var(--black100);
+}
+
+.common_main_header .custom_navbar_nav .dropdown-menu .dropdown-item {
+    color: var(--primary);
+    font-size: 14px;
+    padding: 5px 15px;
+    font-weight: var(--fontMedium);
+}
+
+.common_main_header .custom_navbar_nav .dropdown-menu .dropdown-item:hover {
+    color: var(--black100);
+    background-color: var(--warning) !important;
+}
+
+/* ends: main header */
+
+/* =====================primary nav===================== */
+
+.primary_nav {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-color: var(--white);
+    box-shadow: -3px 1px 13px 0px #e2e2e2;
+    border-right: 1px solid var(--gray);
+}
+
+.primary_nav .content-body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.common_main_header.primary_nav .custom_navbar_nav {
+    align-items: flex-start;
+}
+
+.primary_nav .search_frm {
+    padding-top: 30px;
+    width: 100%;
+}
+
+.form-group, .primary_nav .search_frm .form-group {
+    position: relative;
+}
+
+.form-control, .primary_nav .search_frm .form-control {
+    border-color: var(--primary);
+    font-size: 14px;
+    font-weight: var(--fontMedium);
+    color: var(--gray);
+    padding: 20px 10px !important;
+}
+
+.search_icon, .primary_nav .search_frm .search_icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.search_icon {
+    height: 10px;
+    top: 9px;
+}
+
+/* ===================== ends: primary nav ===================== */
+
+/* ===================== banner section ===================== */
+
+.container-fluid {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.banner_section.card {
+    border: 0;
+    border-radius: 0;
+}
+
+.banner_section .card-img-overlay {
+    display: flex;
+    align-items: center;
+}
+
+.banner_section .card-img-overlay h1 {
+    font-weight: var(--fontBlack);
+    font-size: 2.3rem;
+    color: var(--white);
+    text-shadow: 3px 3px 3px var(--primary);
+    margin-bottom: 20px;
+}
+
+/* ===============  slider css  ================ */
+
+.banner_slider_section .swiper-container {
+    position: relative;
+    width: 100%;
+    /* height: 300px; */
+}
+
+.banner_slider_section .swiper-container>.swiper-slide__content {
+    position: absolute;
+    top: 0;
+}
+
+.banner_slider_section .swiper-slide {
+    height: 480px;
+    display: flex;
+    /* flex-direction: column; */
+    background: var(--white);
+    align-items: center;
+    justify-content: center;
+    transition: all 200ms linear;
+    transform: scale(0.8);
+}
+
+.banner_slider_section .slide-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* justify-content: center; */
+    width: 100%;
+    background: var(--white);
+    border-radius: 8px;
+    padding: 3px;
+}
+
+.banner_slider_section .slide-card .slide_img {
+    width: 100%;
+    /* height: 200px; */
+    margin-top: 110px;
+    object-fit: contain;
+    border-radius: 5px 5px 0 0;
+}
+
+.banner_slider_section .slide-card .content_body {
+    padding: 10px;
+}
+
+.banner_slider_section .slide-card h6 {
+    font-size: 10px !important;
+    font-weight: var(--fontMedium);
+    display: flex;
+    align-items: center;
+}
+
+.banner_slider_section .slide-card h6 img {
+    width: 5px;
+    margin-left: 10px;
+}
+
+.banner_slider_section .slide-card p {
+    font-size: 8px;
+    color: var(--gray);
+    margin: 10px 0;
+}
+
+.banner_slider_section .slide-card .btn {
+    font-size: 8px;
+    width: 100%;
+    padding: 3px 20px !important;
+    border-radius: 7px !important;
+    white-space: nowrap;
+}
+
+.banner_slider_section .slide-card .form-control {
+    font-size: 8px;
+    width: 100%;
+    padding: 3px 10px !important;
+    border-radius: 5px !important;
+    margin-top: 10px;
+}
+
+.banner_slider_section .swiper-slide.swiper-slide-active {
+    border-radius: var(--border_radius);
+    transform: scale(1.8);
+    background: #fc0;
+    z-index: 3;
+}
+
+.swiper-slide__content {
+    height: 600px;
+}
+
+/* ===============  ends: slider css  ================ */
+
+
+/* ===============  about section css  ================ */
+
+.about_section .card-img-overlay
+{
+   padding: 100px 0 200px 0;
+   width: 60%;
+   margin: 0 auto;
+}
+.about_section .card-img-overlay
+{
+   align-items: center;
+   flex-direction: column;
+   display: flex;
+   justify-content: center;
+   
+   position: absolute;
+   top: 100px;
+
+}
+.about_section .card-img
+{
+    position: absolute;
+    top: -24px;
+}
+.about_section .card-img-overlay h4
+{
+    font-weight: var(--fontBlack);
+    color: var(--primary100);
+}
+.about_section .card-img-overlay p
+{
+    font-weight: var(--fontRegular);
+    color: var(--gray);
+    text-align: center;
+    padding: 15px 0;
+}
+/* ===============  ends: about section css  ================ */
+
+/* ===================== ends: banner section ===================== */

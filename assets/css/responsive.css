@@ -1,0 +1,87 @@
+/* Large devices (desktops, less than 1200px) */
+
+@media (max-width: 1199px) {}
+
+/* only width - 1024 */
+
+@media (max-width: 1024px) {
+    .banner_slider_section .slide-card .content_body {
+        padding: 0;
+    }
+}
+
+/* Small devices (portrait phones, landscape phones, less than 768px) */
+
+@media (max-width: 768px) {
+    .container-fluid {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .common_main_header .logo_row {
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 100%;
+    }
+    .banner_section .card-img {
+        min-height: 550px;
+        object-fit: cover;
+    }
+    .banner_section .card-img-overlay {
+        padding: 0 !important;
+    }
+    .banner_slider_section {
+        margin-top: 30px;
+    }
+    .banner_slider_section .slide-card .slide_img {
+        margin-top: 0;
+    }
+    .banner_slider_section .swiper-slide {
+        height: auto;
+    }
+    .banner_slider_section .swiper-slide.swiper-slide-active {
+        transform: scale(1);
+    }
+    .banner_slider_section .slide-card h6 {
+        font-size: 15px !important;
+        margin-top: 20px;
+    }
+    .banner_slider_section .slide-card p {
+        font-size: 12px;
+        font-weight: var(--fontRegular);
+    }
+    .banner_slider_section .slide-card .form-control, .banner_slider_section .slide-card .btn {
+        font-size: 12px;
+    }
+    .about_section .card-img-overlay {
+        width: 90%;
+    }
+    /* primary nav */
+    /* ends: primary nav */
+}
+
+/* Small devices (landscape phones, less than 768px) */
+
+@media (max-width: 767px) {
+    .common_main_header .logo_row {
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .common_main_header .logo_sub_row {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        /* align-items: center; */
+    }
+    .common_main_header .gov_logo {
+        max-width: 100%;
+    }
+    .banner_section .card-img {
+        min-height: 800px;
+        object-fit: cover;
+    }
+    .about_section .card-img-overlay {
+        top: 270px;
+    }
+    .about_section .card-img-overlay h4 {
+        font-size: 20px;
+    }
+}
