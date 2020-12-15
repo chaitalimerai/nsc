@@ -165,6 +165,7 @@ button, input, textarea {
 
 .common_main_header .custom_navbar_nav .nav-link.header_search_icon {
     background-color: transparent !important;
+    height: 20px;
 }
 
 .common_main_header .custom_navbar_nav .dropdown-menu {
@@ -230,15 +231,15 @@ button, input, textarea {
     padding: 20px 10px !important;
 }
 
-.search_icon, .primary_nav .search_frm .search_icon {
+.search_icon, 
+.primary_nav .search_frm .search_icon {
     position: absolute;
     right: 10px;
     top: 10px;
 }
 
 .search_icon {
-    height: 10px;
-    top: 9px;
+    top: 7px;
 }
 
 /* ===================== ends: primary nav ===================== */
@@ -258,6 +259,9 @@ button, input, textarea {
 .banner_section .card-img-overlay {
     display: flex;
     align-items: center;
+}
+.banner_section .card-img-overlay .search_icon {
+   height: 10px;
 }
 
 .banner_section .card-img-overlay h1 {

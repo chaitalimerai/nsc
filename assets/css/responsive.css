@@ -9,6 +9,19 @@
         padding: 0;
     }
 }
+@media screen and (width: 1024px) {
+    .banner_slider_section .slide-card h6 {
+        font-size: 8px !important;
+        margin-top: 3px;
+    }
+    .banner_slider_section .slide-card p {
+        margin: 7px 0;
+    }
+    .banner_slider_section .swiper-slide {
+        height: 450px;
+       
+    }
+}
 
 /* Small devices (portrait phones, landscape phones, less than 768px) */
 
